@@ -14,7 +14,7 @@ function compute()
     p = document.getElementById("principal").value;        //Principal
     if(p==0 || p<0)
     {
-    	alert("Enter a positive number for principal");
+    	alert("Enter a positive number");
     	document.getElementById("principal").focus();
     	return;
     }
