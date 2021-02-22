@@ -3,7 +3,8 @@
 
 function show(){
     var r=document.getElementById("rate").value;
-    document.getElementById("s").innerHTML = " "+r;
+    var s="%";
+    document.getElementById("s").innerHTML = " "+r+s;
 }
 
 
@@ -14,6 +15,8 @@ function compute()
     if(p==0 || p<0)
     {
     	alert("Enter a positive number for principal");
+    	document.getElementById("principal").focus();
+    	return;
     }
 
     var r=document.getElementById("rate").value;        //Rate of interest
@@ -28,12 +31,12 @@ function compute()
     var f=(d.getFullYear()+Number(y));               //Tells the year when user will get the final amount 
 
     
-    document.getElementById("result").innerHTML=" "+i;
+    //document.getElementById("result").innerHTML=" "+i;
 
-    var str1="If you deposit "+p;
-    var str2=",at an interest rate of "+r;
-    var str3="%.You will receive an amount of "+i;
-    var str4=",in the year "+f;
-    document.getElementById("result1").innerHTML=str1+ str2+str3+str4;
+    var str1="If you deposit <mark> "+p+"</mark>,";
+    var str2="at an interest rate of <mark> "+r+"%</mark>.";
+    var str3="You will receive an amount of <mark> "+i+"</mark>,";
+    var str4="in the year <mark> "+f+"</mark>";
+    document.getElementById("result1").innerHTML=str1+"<br>"+str2+"<br>"+str3+"<br>"+str4;
 }
 

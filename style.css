@@ -5,6 +5,7 @@ color: white;}
 h1{color:grey;
 font:verdana;
 font-family: Arial Black,Arial Bold,Gadget,sans-serif;
+text-align: center;
 }
 
 div{
@@ -16,6 +17,13 @@ div{
     width: 94%;
     margin-left: 15px;
     margin-right: 15px;
+    
+}
+
+#amount,#Rate,#Years,#button,#res{
+	position: relative;
+	left: 450px;
+	
 }
 
 
